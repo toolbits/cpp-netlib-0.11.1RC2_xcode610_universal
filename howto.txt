@@ -1,0 +1,13 @@
+### cpp-netlib with clang (libc++ with C++11)
+sudo rm -rf /usr/local/cpp-netlib_libc++11
+
+BOOST_INCLUDEDIR=/usr/local/boost_libc++11/include; export BOOST_INCLUDEDIR
+BOOST_LIBRARYDIR=/usr/local/boost_libc++11/lib/a; export BOOST_LIBRARYDIR
+
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_FLAGS="-std=c11 -stdlib=libc++ -arch i386 -arch x86_64" -DCMAKE_CXX_FLAGS="-std=c++11 -stdlib=libc++ -arch i386 -arch x86_64" -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ .
+make
+
+sudo mkdir -p /usr/local/cpp-netlib_libc++11/include
+sudo mkdir -p /usr/local/cpp-netlib_libc++11/lib/a
+sudo cp -R boost /usr/local/cpp-netlib_libc++11/include/.
+sudo cp libs/network/src/*.a /usr/local/cpp-netlib_libc++11/lib/a/.
