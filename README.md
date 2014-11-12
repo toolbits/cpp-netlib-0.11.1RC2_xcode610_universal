@@ -1,7 +1,7 @@
 cpp-netlib-0.11.1RC2_xcode610_universal
 =======================================
 
-An information to enable you to compile universal binary (32bits + 64bits) libraries with clang under xcode 6.1.0.<br/>
+Patch files to enable you to compile universal binary (32bits + 64bits) libraries with clang under xcode 6.1.0.<br/>
 
 ### development environment:
 
@@ -10,6 +10,16 @@ o MacOS X 10.9.5<br/>
 o Xcode 6.1.0<br/>
 o clang = Apple LLVM version 6.0 (clang-600.0.54) (based on LLVM 3.5svn)<br/>
 o boost_1_56_0<br/>
+
+
+
+### apply patches
+### from http://github.com/toolbits/cpp-netlib-0.11.1RC2_xcode610_universal
+mv [_uri.ipp] cpp-netlib-0.11.1RC2/.<br/>
+
+cd cpp-netlib-0.11.1RC2<br/>
+
+mv _uri.ipp boost/network/uri/uri.ipp<br/>
 
 
 

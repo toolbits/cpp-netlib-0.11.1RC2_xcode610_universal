@@ -1,3 +1,13 @@
+### apply patches
+# from http://github.com/toolbits/cpp-netlib-0.11.1RC2_xcode610_universal
+mv [_uri.ipp] cpp-netlib-0.11.1RC2/.
+
+cd cpp-netlib-0.11.1RC2
+
+mv _uri.ipp boost/network/uri/uri.ipp
+
+
+
 ### cpp-netlib with clang (libc++ with C++11)
 sudo rm -rf /usr/local/cpp-netlib_libc++11
 
